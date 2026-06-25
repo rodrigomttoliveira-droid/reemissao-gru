@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sistema de Reemissão de GRU</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Sistema de Reemissão de GRU</h1>
+
+        <h2>Força Aérea Brasileira</h2>
+
+        <p class="texto">
+            Preencha os dados exatamente como constam na GRU vencida em PDF.
+            O novo vencimento será definido automaticamente para o dia seguinte à emissão da nova GRU.
+        </p>
+
+        <label>Número de Referência</label>
+        <input
+            type="text"
+            id="referencia"
+            placeholder="Ex.: 22026220380"
+            autofocus>
+
+        <label>Competência da GRU (MM/AAAA)</label>
+        <input
+            type="text"
+            id="competencia"
+            maxlength="7"
+            placeholder="Ex.: 02/2026"
+            oninput="mascaraCompetencia(this)">
+
+        <label>CPF do Permissionário</label>
+        <input
+            type="text"
+            id="cpf"
+            maxlength="14"
+            placeholder="Ex.: 12345678900"
+            oninput="mascaraCPF(this)">
+
+        <label>Nome do Permissionário</label>
+        <input
+            type="text"
+            id="nome"
+            placeholder="Ex.: JOÃO DA SILVA">
+
+        <label>Valor Principal (R$)</label>
+        <input
+            type="text"
+            id="valor"
+            placeholder="Ex.: 169,00"
+            oninput="mascaraValor(this)">
+
+        <button onclick="gerarGRU()">
+            REEMITIR GRU
+        </button>
+
+        <footer>
+            Força Aérea Brasileira
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
